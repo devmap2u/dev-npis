@@ -19,7 +19,7 @@ use App\Http\Controllers\PenggunaController;
     // return view('welcome');
 // });
 Route::get('/', [MainController::class, 'index'] );
-Route::get('/admin', [MainController::class, 'admin'] )->middleware('auth');
+Route::get('/dashboard', [MainController::class, 'dashboard'] )->middleware('auth');
 
 Route::get('/pengguna', [PenggunaController::class, 'index'] )->name('pengguna')->middleware('auth');
 Route::get('/tambahpengguna', [PenggunaController::class, 'tambahpengguna'] )->name('tambahpengguna')->middleware('auth');

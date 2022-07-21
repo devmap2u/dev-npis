@@ -14,7 +14,7 @@ class LoginController extends Controller
     }
     public function login_process(Request $request){
         if(Auth::attempt($request->only('ic','password') )){
-            return redirect('/admin');
+            return redirect('/dashboard');
         }else{
             return redirect('/');
         }
