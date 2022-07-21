@@ -18,9 +18,9 @@ class MainController extends Controller
 			'data' => $data
 		]);
 	}
-    public function admin(Request $request){
+    public function dashboard(Request $request){
        $pengguna_c = Pengguna::count();
        $pengguna_c = Pengguna::count();
-		return view('admin', compact('pengguna_c'));
+		return view('dashboard', compact('pengguna_c'));
 	}
 }
