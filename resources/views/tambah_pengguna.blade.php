@@ -40,7 +40,7 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama">
+                                <input type="text" class="form-control" id="name" name="name">
                             </div>
                             <div class="mb-3">
                                 <label for="ic" class="form-label">IC</label>
@@ -48,22 +48,15 @@
                             </div>
                             <div class="mb-3">
                                 <label for="alamat" class="form-label">Alamat</label>
-                                <input type="text" class="form-control" id="alamat" name="alamat">
+                                <input type="text" class="form-control" id="address" name="address">
                             </div>
                             <div class="mb-3">
                                 <label for="telefon" class="form-label">Telefon</label>
-                                <input type="text" class="form-control" id="telefon" name="telefon">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputNama" class="form-label">Jantina</label>
-                                <select class="form-select" aria-label="Default select example" id="jantina" name="jantina">
-                                    <option value="Lelaki">Lelaki</option>
-                                    <option value="Perempuan">Perempuan</option>
-                                </select>
+                                <input type="text" class="form-control" id="phone" name="phone">
                             </div>
                             <div class="mb-3">
                                 <label for="emel" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="emel" name="emel" aria-describedby="emailHelp">
+                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="jawatan" class="form-label">Jawatan</label>
@@ -74,8 +67,15 @@
                                 <input type="text" class="form-control" id="kementerian" name="kementerian">
                             </div>
                             <div class="mb-3">
-                                <label for="status" class="form-label">Status</label>
-                                <input type="text" class="form-control" id="status" name="status">
+                                <label for="exampleInputNama" class="form-label">Kumpulan</label>
+                                <select class="form-select" aria-label="Default select example" id="role" name="role">
+                                    <option value="1">Pengguna</option>
+                                    <option value="99">Pentadbir</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Katalaluan</label>
+                                <input type="password" class="form-control" id="password" name="password">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

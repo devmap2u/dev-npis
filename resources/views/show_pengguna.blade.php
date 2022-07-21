@@ -40,43 +40,39 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama }}">
+                                <input type="text" class="form-control" id="name" name="name" value="{{ $data->name }}">
                             </div>
                             <div class="mb-3">
                                 <label for="ic" class="form-label">IC</label>
-                                <input type="text" class="form-control" id="ic" name="ic" value="{{$data->ic}}">
+                                <input type="text" class="form-control" id="ic" name="ic" value="{{ $data->ic }}">
                             </div>
                             <div class="mb-3">
                                 <label for="alamat" class="form-label">Alamat</label>
-                                <input type="text" class="form-control" id="alamat" name="alamat" value="{{$data->alamat}}">
+                                <input type="text" class="form-control" id="address" name="address" value="{{ $data->address }}">
                             </div>
                             <div class="mb-3">
                                 <label for="telefon" class="form-label">Telefon</label>
-                                <input type="text" class="form-control" id="telefon" name="telefon" value="{{$data->telefon}}">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputNama" class="form-label">Jantina</label>
-                                <select class="form-select" aria-label="Default select example" id="jantina" name="jantina">
-                                    <option selected  value="{{$data->jantina}}"> {{$data->jantina}}</option>
-                                    <option value="Lelaki">Lelaki</option>
-                                    <option value="Perempuan">Perempuan</option>
-                                </select>
+                                <input type="text" class="form-control" id="phone" name="phone" value="{{ $data->phone }}">
                             </div>
                             <div class="mb-3">
                                 <label for="emel" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="emel" name="emel" aria-describedby="emailHelp" value="{{$data->emel}}">
+                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="{{ $data->email }}">
                             </div>
                             <div class="mb-3">
                                 <label for="jawatan" class="form-label">Jawatan</label>
-                                <input type="text" class="form-control" id="jawatan" name="jawatan" value="{{$data->jawatan}}">
+                                <input type="text" class="form-control" id="jawatan" name="jawatan" value="{{ $data->jawatan }}">
                             </div>
                             <div class="mb-3">
                                 <label for="kementerian" class="form-label">Jabatan/Kementerian</label>
-                                <input type="text" class="form-control" id="kementerian" name="kementerian" value="{{$data->kementerian}}">
+                                <input type="text" class="form-control" id="kementerian" name="kementerian" value="{{ $data->kementerian }}">
                             </div>
                             <div class="mb-3">
-                                <label for="status" class="form-label">Status</label>
-                                <input type="text" class="form-control" id="status" name="status" value="{{$data->status}}">
+                                <label for="exampleInputNama" class="form-label">Kumpulan</label>
+                                <select class="form-select" aria-label="Default select example" id="role" name="role">
+                                    <option value="{{ $data->role }}">{{ $data->role }}</option>
+                                    <option value="1">Pengguna</option>
+                                    <option value="99">Pentadbir</option>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
