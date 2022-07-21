@@ -35,7 +35,6 @@ class LoginController extends Controller
             'kementerian' => $request->kementerian,
             'status' => 'Aktif',
             'password' => bcrypt($request->password),
-            'role' => '2',
             'remember_token' => Str::random(60),
         ]);
         return redirect('/');

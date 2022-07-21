@@ -19,15 +19,20 @@ use App\Http\Controllers\PenggunaController;
     // return view('welcome');
 // });
 Route::get('/', [MainController::class, 'index'] );
-Route::get('/dashboard', [MainController::class, 'dashboard'] )->middleware('auth');
 
-Route::get('/pengguna', [PenggunaController::class, 'index'] )->name('pengguna')->middleware('auth');
-Route::get('/tambahpengguna', [PenggunaController::class, 'tambahpengguna'] )->name('tambahpengguna')->middleware('auth');
-Route::post('/insertpengguna', [PenggunaController::class, 'insertpengguna'] )->name('insertpengguna')->middleware('auth');
 
-Route::get('/showpengguna/{id}', [PenggunaController::class, 'showpengguna'] )->name('showpengguna')->middleware('auth');
-Route::post('/editpengguna/{id}', [PenggunaController::class, 'editpengguna'] )->name('editpengguna')->middleware('auth');
-Route::get('/deletepengguna/{id}', [PenggunaController::class, 'deletepengguna'] )->name('deletepengguna')->middleware('auth');
+Route::group(['middleware' => ['auth','AccessLevel:1,99']], function(){
+    Route::get('/dashboard', [MainController::class, 'dashboard'] );
+    Route::get('/pengguna', [PenggunaController::class, 'index'] )->name('pengguna');
+    Route::get('/tambahpengguna', [PenggunaController::class, 'tambahpengguna'] )->name('tambahpengguna');
+    Route::post('/insertpengguna', [PenggunaController::class, 'insertpengguna'] )->name('insertpengguna');
+
+    Route::get('/showpengguna/{id}', [PenggunaController::class, 'showpengguna'] )->name('showpengguna');
+    Route::post('/editpengguna/{id}', [PenggunaController::class, 'editpengguna'] )->name('editpengguna');
+    Route::get('/deletepengguna/{id}', [PenggunaController::class, 'deletepengguna'] )->name('deletepengguna');
+});
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
