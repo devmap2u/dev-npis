@@ -79,9 +79,7 @@
                     </table>
                 </div>
             </div>
-
-test
-
+{{-- test --}}
 
         </div><!-- /.container-fluid -->
         </section>
