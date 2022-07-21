@@ -502,7 +502,7 @@
 							<div class="form loginBox">
 								<form method="post" action="/login_process" accept-charset="UTF-8">
                                     @csrf
-								<input id="nokp" class="form-control" type="text" placeholder="Email" name="email">
+								<input id="nokp" class="form-control" type="text" placeholder="Email TEST" name="email">
 								<input id="pwd" class="form-control" type="password" placeholder="Katalaluan" name="password">
 								<!-- <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()"> -->
                                 <input class="btn btn-default btn-login" value="Login" type="submit"></button>

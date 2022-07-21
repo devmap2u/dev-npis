@@ -36,3 +36,4 @@ Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('re
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login_process', [LoginController::class, 'login_process'])->name('login_process');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
