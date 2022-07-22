@@ -65,6 +65,9 @@ class PenggunaController extends Controller
         $data->delete();
         return redirect()->route('pengguna')->with('success', 'Pengguna berjaya di hapus');
     }
+    public function mapviewer(){
+        return view('mapviewer');
+    }
 
 
 }

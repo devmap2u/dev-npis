@@ -30,6 +30,7 @@ Route::group(['middleware' => ['auth','AccessLevel:1,99']], function(){
     Route::get('/showpengguna/{id}', [PenggunaController::class, 'showpengguna'] )->name('showpengguna');
     Route::post('/editpengguna/{id}', [PenggunaController::class, 'editpengguna'] )->name('editpengguna');
     Route::get('/deletepengguna/{id}', [PenggunaController::class, 'deletepengguna'] )->name('deletepengguna');
+    Route::get('/mapviewer', [PenggunaController::class, 'mapviewer'] )->name('mapviewer');
 });
 
 

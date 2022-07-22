@@ -3,40 +3,28 @@
 
 @section('content')
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="row page-titles">
+            <div class="col-md-6 col-8 align-self-center">
+                <h3 class="text-themecolor m-b-0 m-t-0">Tambah Pengguna</h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Pengguna</a></li>
+                    <li class="breadcrumb-item active">Tambah Pengguna</li>
+                </ol>
+            </div>
+        </div>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-
-
-
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <div class="contrainer">
-        <div class="row">
-            <div class="card">
-                <div class="card-body">
-                    <div class="col-8">
-                        <form action="/editpengguna/{{$data->id}}" method="post" enctype="multipart/form-data">
+            <div class="col-lg-8 col-xlg-9 col-md-7">
+                <div class="card">
+                    <div class="card-block">
+                        <form action="/editpengguna/{{$data->id}}" method="post" enctype="multipart/form-data" class="form-horizontal form-material">
                             @csrf
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama</label>
@@ -68,7 +56,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputNama" class="form-label">Kumpulan</label>
-                                <select class="form-select" aria-label="Default select example" id="role" name="role">
+                                <select class="form-control form-control-line" aria-label="Default select example" id="role" name="role">
                                     <option value="{{ $data->role }}">{{ $data->role }}</option>
                                     <option value="1">Pengguna</option>
                                     <option value="99">Pentadbir</option>
@@ -79,15 +67,17 @@
                     </div>
                 </div>
             </div>
+            <!-- Column -->
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> --}}
 
+</div>
 
-    </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
+<footer class="footer text-center">
+    © 2017 Monster Admin by wrappixel.com
+</footer>
+
+</div>
 
 @endsection
