@@ -35,7 +35,7 @@ Route::group(['middleware' => ['auth','AccessLevel:1,99']], function(){
 
 
 
-
+//test
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/register', [LoginController::class, 'register'])->name('register');
